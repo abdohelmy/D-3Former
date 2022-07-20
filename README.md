@@ -5,9 +5,8 @@
 
 <hr />
 
-# :rocket: News
-* **(July 20, 2022)** 
-  * Code released
+# :rocket: Updates
+* **(July 20, 2022)**: Code released
 <hr />
 
 ## Installation
@@ -59,4 +58,4 @@ python3 main.py --gpu 0 --dataset imagenet --nb_cl_fg 500 --nb_cl 100 --the_lamb
 Our code is built upon [AANet](https://github.com/yaoyao-liu/class-incremental-learning/tree/main/adaptive-aggregation-networks). We would like to thank the authors for their implementation.
 
 ## Contact
-Please feel free to create an issue here or contact us at abdelrahman.mohamed@mbzuai.ac.ae or rushali.grandhe@mbzuai.ac.ae
+Please feel free to create an issue here or contact us at abdelrahman.mohamed@mbzuai.ac.ae, rushali.grandhe@mbzuai.ac.ae
