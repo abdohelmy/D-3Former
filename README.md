@@ -15,6 +15,16 @@ Our code has been tested on CUDA 11.3 and pytorch version 1.10.1
 
 For easier sake, we also provide a [yml file](incremental.yml). to recreate the conda environment
 
+## Datasets
+
+<strong>CIFAR100</strong> will be downloaded automatically by torchvision when running the experiments.
+
+<strong>ImageNet-subset100</strong> can be downloaded by following the instructions [here](https://github.com/yaoyao-liu/class-incremental-learning/tree/main/adaptive-aggregation-networks#imagenet-subset)
+
+<strong>ImageNet1K</strong> can be downloaded from the [official website](https://www.image-net.org/download.php)
+
+The corresponding path of the folder has to be set as `data_dir` argument in [main.py](main.py)
+
 ## Results
 
 ![Results](images/acc_plot.png)
