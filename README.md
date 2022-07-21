@@ -9,11 +9,22 @@
 * **(July 20, 2022)**: Code released
 <hr />
 
-## Installation
+## Getting Started
 
-Our code has been tested on CUDA 11.3 and pytorch version 1.10.1
+In order to run this repository, we advise you to install python 3.8, CUDA 11.3 and pytorch version 1.10.1.
+First you need to clone the repo 
+```bash
+git clone https://github.com/abdohelmy/D-3Former.git
+```
+You may download Anaconda and read the installation instruction on their official website:
+<https://www.anaconda.com/download/>
 
-For easier sake, we also provide a [yml file](incremental.yml). to recreate the conda environment
+Create a new environment from the provided yml file:
+
+```bash
+conda env create -f incremental.yml
+```
+
 
 ## Datasets
 
@@ -41,12 +52,14 @@ rate F(%) of different methods in 5,10 and 25 tasks settings.
 Results of <strong>ImageNet100</strong> with Average accuracy (%), last phase accuracy (%) and forgetting
 rate F(%) of different methods in 5,10 and 25 tasks settings.
 
-## Training
+## Running Experiments
 
 <strong> For CIFAR-100</strong>
 
-```
+```bash
 python3 main.py --gpu 0 --dataset cifar100 --nb_cl_fg 50 --nb_cl 10 --the_lambda 10 --tau 1 --gamma 0.1 --warmup 10
+python3 main.py --gpu 0 --dataset cifar100 --nb_cl_fg 50 --nb_cl 5 --the_lambda 10 --tau 1 --gamma 0.1 --warmup 10
+python3 main.py --gpu 0 --dataset cifar100 --nb_cl_fg 50 --nb_cl 2 --the_lambda 10 --tau 1 --gamma 0.1 --warmup 10
 ```
 
 
@@ -54,6 +67,8 @@ python3 main.py --gpu 0 --dataset cifar100 --nb_cl_fg 50 --nb_cl 10 --the_lambda
 
 ```
 python3 main.py --gpu 0 --dataset imagenet_sub --nb_cl_fg 50 --nb_cl 10 --the_lambda 4 --tau 0.3 --gamma 0.05 --warmup 20
+python3 main.py --gpu 0 --dataset imagenet_sub --nb_cl_fg 50 --nb_cl 5 --the_lambda 4 --tau 0.3 --gamma 0.05 --warmup 20
+python3 main.py --gpu 0 --dataset imagenet_sub --nb_cl_fg 50 --nb_cl 2 --the_lambda 4 --tau 0.3 --gamma 0.05 --warmup 20
 ```
 
 
@@ -61,6 +76,7 @@ python3 main.py --gpu 0 --dataset imagenet_sub --nb_cl_fg 50 --nb_cl 10 --the_la
 
 ```
 python3 main.py --gpu 0 --dataset imagenet --nb_cl_fg 500 --nb_cl 100 --the_lambda 4 --tau 0.3 --gamma 0.05 --warmup 20
+python3 main.py --gpu 0 --dataset imagenet --nb_cl_fg 500 --nb_cl 50 --the_lambda 4 --tau 0.3 --gamma 0.05 --warmup 20
 ```
 
 ## Acknowledgement
