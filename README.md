@@ -94,5 +94,27 @@ python3 main.py --gpu 0 --dataset imagenet --nb_cl_fg 500 --nb_cl 50 --the_lambd
 
 Our code is built upon [AANet](https://github.com/yaoyao-liu/class-incremental-learning/tree/main/adaptive-aggregation-networks). We would like to thank the authors for their implementation.
 
+## Citation
+
+```
+@misc{https://doi.org/10.48550/arxiv.2208.00777,
+  doi = {10.48550/ARXIV.2208.00777},
+  
+  url = {https://arxiv.org/abs/2208.00777},
+  
+  author = {Mohamed, Abdelrahman and Grandhe, Rushali and Joseph, KJ and Khan, Salman and Khan, Fahad},
+  
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {$\textrm{D}^3\textrm{Former}$: Debiased Dual Distilled Transformer for Incremental Learning},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
+
 ## Contact
 Please feel free to create an issue here or contact us at abdelrahman.mohamed@mbzuai.ac.ae, rushali.grandhe@mbzuai.ac.ae
