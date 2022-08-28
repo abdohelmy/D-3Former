@@ -77,7 +77,7 @@ class Trainer(BaseTrainer):
         the_lambda_mult = None
         config = dict(
         epochs=self.args.epochs,
-        mempry=self.rags.nb_protos,
+        memory=self.args.nb_protos,
         batch_size=self.args.batch_size,
         dataset=self.args.dataset,
         learning_rate = self.args.base_lr1,
