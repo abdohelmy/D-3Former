@@ -195,7 +195,7 @@ class Trainer(BaseTrainer):
                             raise ValueError('Please set the correct baseline.')       
                     else:         
                         # Training the class-incremental learning system from the 0th phase           
-                        cur_model = incremental_train_and_eval_zeroth_phase(self.args, self.args.epochs, cur_model, \
+                        cur_model = incremental_train_and_eval_zeroth_phase(self.args, self.args.base_epochs, cur_model, \
                             ref_model, tg_optimizer, tg_lr_scheduler, trainloader, testloader, iteration, start_iter, \
                             cur_lambda ) 
     
