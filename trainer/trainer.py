@@ -78,7 +78,7 @@ class Trainer(BaseTrainer):
         config = dict(
         epochs=self.args.epochs,
         memory=self.args.nb_protos,
-        batch_size=self.args.batch_size,
+        batch_size=self.args.train_batch_size,
         dataset=self.args.dataset,
         learning_rate = self.args.base_lr1,
         phases=self.args.nb_cl,
