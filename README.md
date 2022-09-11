@@ -5,11 +5,8 @@
 
 ## Getting Started
 
-In order to run this repository, we advise you to install python 3.8, CUDA 11.3 and pytorch version 1.10.1.
-First you need to clone the repo 
-```bash
-git clone https://github.com/abdohelmy/D-3Former.git
-```
+We advise using python 3.8, CUDA 11.3 and pytorch version 1.10.1
+
 You may download Anaconda and read the installation instruction on their official website:
 <https://www.anaconda.com/download/>
 
@@ -90,23 +87,12 @@ Our code is built upon [AANet](https://github.com/yaoyao-liu/class-incremental-l
 
 ## Citation
 
-```
-@misc{https://doi.org/10.48550/arxiv.2208.00777,
-  doi = {10.48550/ARXIV.2208.00777},
-  
-  url = {https://arxiv.org/abs/2208.00777},
-  
-  author = {Mohamed, Abdelrahman and Grandhe, Rushali and Joseph, KJ and Khan, Salman and Khan, Fahad},
-  
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), Machine Learning (cs.LG), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {$\textrm{D}^3\textrm{Former}$: Debiased Dual Distilled Transformer for Incremental Learning},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {arXiv.org perpetual, non-exclusive license}
+```bibtex
+  @article{mohamed2022textrm,
+  title={$$\backslash$textrm $\{$D$\}$\^{} 3$\backslash$textrm $\{$Former$\}$ $: Debiased Dual Distilled Transformer for Incremental Learning},
+  author={Mohamed, Abdelrahman and Grandhe, Rushali and Joseph, KJ and Khan, Salman and Khan, Fahad},
+  journal={arXiv preprint arXiv:2208.00777},
+  year={2022}
 }
 ```
 
