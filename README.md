@@ -89,7 +89,7 @@ Our code is built upon [AANet](https://github.com/yaoyao-liu/class-incremental-l
 
 ```bibtex
   @article{mohamed2022textrm,
-  title={$$\backslash$textrm $\{$D$\}$\^{} 3$\backslash$textrm $\{$Former$\}$ $: Debiased Dual Distilled Transformer for Incremental Learning},
+  title={Debiased Dual Distilled Transformer for Incremental Learning},
   author={Mohamed, Abdelrahman and Grandhe, Rushali and Joseph, KJ and Khan, Salman and Khan, Fahad},
   journal={arXiv preprint arXiv:2208.00777},
   year={2022}
