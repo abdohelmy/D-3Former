@@ -89,9 +89,7 @@ class Trainer(BaseTrainer):
     )
         
         flag=0
-        with wandb.init(mode="offline",project="nest",config=config):
-
-        
+        with wandb.init(mode="offline",project="nest",config=config):        
 
             cur_model = None
             ref_model = None
@@ -179,8 +177,7 @@ class Trainer(BaseTrainer):
                         # Training the class-incremental learning system from the 1st phase
     
                         # Set the balanced dataloader
-                        balancedloader = self.gen_balanced_loader(X_train_total, Y_train_total, indices_train_10, X_protoset, Y_protoset, order_list)
-    
+                        balancedloader = self.gen_balanced_loader(X_train_total, Y_train_total, indices_train_10, X_protoset, Y_protoset, order_list)   
           
 
                         if self.args.baseline == 'lucir':
