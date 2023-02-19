@@ -40,6 +40,7 @@ def compute_adjustment(train_loader, device,tro=1):
     adjustments = torch.from_numpy(adjustments)
     adjustments = adjustments.to(device)
     return adjustments
+
 def gradcam_loss(old, cur_model, ref_model, target_layers, ref_target_layers, device):
     loss3 = torch.zeros(1).to(device)
     temp = None
@@ -58,7 +59,6 @@ def gradcam_loss(old, cur_model, ref_model, target_layers, ref_target_layers, de
         ref_grayscale_cam = ref_cam(input_tensor=old, targets=ref_target)
 
         for i in range(old.shape[0]):
-            # You can also pass aug_smooth=True and eigen_smooth=True, to apply smoothing.
 
             cam = grayscale_cam[i, :]
             cam_image = show_cam_on_image(old[i,:].permute(1,2,0).numpy(), cam, use_rgb=True)
@@ -80,6 +80,7 @@ def gradcam_loss(old, cur_model, ref_model, target_layers, ref_target_layers, de
 
         loss3+=nn.L1Loss()(temp,ref_temp)#L1Loss
     return loss3
+
 def incremental_train_and_eval(the_args, epochs,cur_model, ref_model, \
     tg_optimizer, tg_lr_scheduler, trainloader, testloader, iteration, \
     start_iteration, X_protoset_cumuls, Y_protoset_cumuls, order_list, the_lambda,  \
@@ -114,8 +115,7 @@ def incremental_train_and_eval(the_args, epochs,cur_model, ref_model, \
 
         # Set the counters to zeros
         correct = 0
-        total = 0
-    
+        total = 0    
 
         tg_lr_scheduler.step()
 
@@ -135,15 +135,9 @@ def incremental_train_and_eval(the_args, epochs,cur_model, ref_model, \
             # Get a batch of training samples, transfer them to the device
 
             old = inputs[targets<num_old_classes].clone()
-
-
-
-
             
-            loss3 = gradcam_loss(old, cur_model, ref_model, target_layers, ref_target_layers, device)*the_args.gamma 
-            
-            
-            
+            #Loss 3: Grad cam loss
+            loss3 = gradcam_loss(old, cur_model, ref_model, target_layers, ref_target_layers, device)*the_args.gamma
             
             #Normalize for imagenet
             if the_args.dataset == 'imagenet_sub' or the_args.dataset == 'imagenet':
@@ -159,8 +153,7 @@ def incremental_train_and_eval(the_args, epochs,cur_model, ref_model, \
             inputs, targets = inputs.to(device), targets.to(device)
 
             # Clear the gradient of the paramaters for the tg_optimizer
-            tg_optimizer.zero_grad()
-            
+            tg_optimizer.zero_grad()            
 
             # Forward the samples in the deep networks
             outputs, cur_features=cur_model(inputs)
