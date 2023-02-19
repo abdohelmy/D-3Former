@@ -125,10 +125,7 @@ class Trainer(BaseTrainer):
             
             for iteration in range(start_iter, int(self.args.num_classes/self.args.nb_cl)):
                 ### Initialize models for the current phase
-               
-                ############################################################
-                #self.setup(self.args.world_size-1,self.args.world_size) 
-                ###############################################################
+                
                 cur_model, ref_model, lambda_mult, cur_lambda, last_iter = self.init_current_phase_model(iteration, start_iter, cur_model)
                 num_classes = (iteration+1)*self.args.nb_cl
                 if flag==0:
