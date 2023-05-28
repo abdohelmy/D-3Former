@@ -1,8 +1,6 @@
 ## D3Former: Debiased Dual Distilled Transformer for Incremental Learning
 
-[[paper](https://arxiv.org/abs/2208.00777)] | [[poster](Upcoming)]
-
-*:tada: Accepted to CLVision @ CVPR 2023*
+*:tada: Accepted to CLVision @ CVPR 2023* [[paper](https://arxiv.org/abs/2208.00777)] | [[poster](Upcoming)] 
 
 **Abstract:** In class incremental learning (CIL) setting, groups of classes are introduced to a model in each learning phase. The goal is to learn a unified model performant on all the classes observed so far. Given the recent popularity of Vision Transformers (ViTs) in conventional classification settings, an interesting question is to study their continual learning behaviour. In this work, we develop a Debiased Dual Distilled Transformer for CIL dubbed D3Former. The proposed model leverages a hybrid nested ViT design to ensure data efficiency and scalability to small as well as large datasets. In contrast to a recent ViT based CIL approach, our D3Former does not dynamically expand its architecture when new tasks are learned and remains suitable for a large number of incremental tasks. The improved CIL behaviour of D3Former owes to two fundamental changes to the ViT design. First, we treat the incremental learning as a long-tail classification problem where the majority samples from new classes vastly outnumber the limited exemplars available for old classes. To avoid the bias against the minority old classes, we propose to dynamically adjust logits to emphasize on retaining the representations relevant to old tasks. Second, we propose to preserve the configuration of spatial attention maps as the learning progresses across tasks. This helps in reducing catastrophic forgetting by constraining the model to retain the attention on the most discriminative regions. D3Former obtains favorable results on incremental versions of CIFAR-100, MNIST, SVHN, and ImageNet datasets.
 
