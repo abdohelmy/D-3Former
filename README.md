@@ -70,3 +70,18 @@ python3 main.py --gpu 0 --dataset imagenet --nb_cl_fg 500 --nb_cl 50 --the_lambd
 ## Acknowledgement
 
 Our code is built upon [AANet](https://github.com/yaoyao-liu/class-incremental-learning/tree/main/adaptive-aggregation-networks). We would like to thank the authors for their implementation.
+
+## Citation
+
+If you found this project useful, consider starring the repo and cite us in your work:
+
+```
+@InProceedings{Mohamed_2023_CVPR,
+    author    = {Mohamed, Abdelrahman and Grandhe, Rushali and Joseph, K. J. and Khan, Salman and Khan, Fahad},
+    title     = {D3Former: Debiased Dual Distilled Transformer for Incremental Learning},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2023},
+    pages     = {2420-2429}
+}
+```
